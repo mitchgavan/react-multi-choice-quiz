@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './svg/logo.svg';
 import './App.css';
 import Question from './components/Question';
 import QuestionCount from './components/QuestionCount';
@@ -21,19 +21,19 @@ class App extends Component {
           <Question content="What is your favourite food?" />
           <ul className="answerOptions">
             <AnswerOption
-              answerType="test"
+              answerType="sony"
               answerContent="apple"
               userAnswer=""
               onAnswerSelected=""
             />
             <AnswerOption
-              answerType="test"
+              answerType="nintendo"
               answerContent="pear"
-              userAnswer=""
+              userAnswer="nintendo"
               onAnswerSelected=""
             />
             <AnswerOption
-              answerType="test"
+              answerType="microsoft"
               answerContent="orange"
               userAnswer=""
               onAnswerSelected=""

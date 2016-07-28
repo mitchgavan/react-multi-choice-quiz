@@ -32,17 +32,54 @@ body {
   border-top: 1px solid #eee;
 }
 
-.answerOption--button {
-  width: 100%;
-  padding: 1.5rem 2.5rem;
-  border: 0;
-  background-color: #fff;
-  text-align: left;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+.answerOption:hover {
+  background-color: #eefbfe;
 }
 
-.answerOption--button:hover {
-  background-color: #eefbfe;
+/* Custom Radio Buttons (Based on http://codepen.io/imohkay/pen/wyxuB) */
+
+.radioCustomButton {
+    position: absolute;
+    width: auto;
+    opacity: 0;
+}
+
+.radioCustomButton,
+.radioCustomLabel {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.radioCustomLabel {
+    position: relative;
+    margin: 0;
+    padding: 1.5rem;
+    width: 100%;
+    font-size: 16px;
+}
+
+.radioCustomButton ~ .radioCustomLabel:before {
+    content: '';
+    background: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px 6px 6px 2px;
+    margin-right: 10px;
+    margin-top: -3px;
+    text-align: center;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+}
+
+.radioCustomButton:checked ~ .radioCustomLabel:before {
+    content: url(./svg/icon-check.svg);
+    background: #8BC53F;
+    border: 0;
+}
+
+.radioCustomLabel:before {
+    font-size: 14px;
 }
