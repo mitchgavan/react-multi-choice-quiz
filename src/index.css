@@ -1,5 +1,48 @@
 body {
   margin: 0;
   padding: 0;
+  background: #eee;
   font-family: sans-serif;
+}
+
+.quiz {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.question {
+  margin: 0;
+  padding: 0.5rem 1.5rem 1.5rem 2.5rem;
+}
+
+.questionCount {
+  padding: 1.5rem 2.5rem 0;
+  font-size: 14px;
+}
+
+.answerOptions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.answerOption {
+  border-top: 1px solid #eee;
+}
+
+.answerOption--button {
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+  border: 0;
+  background-color: #fff;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.answerOption--button:hover {
+  background-color: #eefbfe;
 }

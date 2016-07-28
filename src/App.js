@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Question from './components/Question';
 import QuestionCount from './components/QuestionCount';
+import AnswerOption from './components/AnswerOption';
 
 class App extends Component {
   render() {
@@ -12,11 +13,33 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>React Quiz</h2>
         </div>
-        <QuestionCount
-          counter={1}
-          total={5}
-        />
-        <Question content="What is your favourite food?" />
+        <div className="quiz">
+          <QuestionCount
+            counter={1}
+            total={5}
+          />
+          <Question content="What is your favourite food?" />
+          <ul className="answerOptions">
+            <AnswerOption
+              answerType="test"
+              answerContent="apple"
+              userAnswer=""
+              onAnswerSelected=""
+            />
+            <AnswerOption
+              answerType="test"
+              answerContent="pear"
+              userAnswer=""
+              onAnswerSelected=""
+            />
+            <AnswerOption
+              answerType="test"
+              answerContent="orange"
+              userAnswer=""
+              onAnswerSelected=""
+            />
+          </ul>
+        </div>
       </div>
     );
   }
