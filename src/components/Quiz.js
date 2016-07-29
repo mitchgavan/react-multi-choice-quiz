@@ -6,6 +6,19 @@ import logo from '../svg/logo.svg';
 
 function Quiz(props) {
 
+  function renderAnswerOptions(key) {
+    return (
+      <AnswerOption
+        key={key.content}
+        answerContent={key.content}
+        answerType={key.type}
+        answer={props.answer}
+        questionId={props.questionId}
+        onAnswerSelected={props.onAnswerSelected}
+      />
+    );
+  }
+
   return (
     <div className="App">
       <div className="App-header">
@@ -14,29 +27,12 @@ function Quiz(props) {
       </div>
       <div className="quiz">
         <QuestionCount
-          counter={1}
-          total={5}
+          counter={props.questionId}
+          total={props.questionTotal}
         />
-        <Question content="What is your favourite food?" />
+        <Question content={props.question} />
         <ul className="answerOptions">
-          <AnswerOption
-            answerType="sony"
-            answerContent="apple"
-            userAnswer=""
-            onAnswerSelected=""
-          />
-          <AnswerOption
-            answerType="nintendo"
-            answerContent="pear"
-            userAnswer="nintendo"
-            onAnswerSelected=""
-          />
-          <AnswerOption
-            answerType="microsoft"
-            answerContent="orange"
-            userAnswer=""
-            onAnswerSelected=""
-          />
+          {props.answerOptions.map(renderAnswerOptions)}
         </ul>
       </div>
     </div>

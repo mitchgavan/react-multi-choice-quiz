@@ -3,15 +3,15 @@ var quizQuestions = [
       question: "I think that my body tends to:",
       answers: [
           {
-              type: "pear",
+              type: "microsoft",
               content: "carry excess weight"
           },
           {
-              type: "apple",
+              type: "nintendo",
               content: "build muscle easily"
           },
           {
-              type: "ruler",
+              type: "sony",
               content: "be fairly lean"
           }
       ]
@@ -20,15 +20,15 @@ var quizQuestions = [
       question: "If I was to describe my body shape, I would say it was:",
       answers: [
           {
-              type: "pear",
+              type: "microsoft",
               content: "pear shaped, with hips wider than shoulders"
           },
           {
-              type: "apple",
+              type: "nintendo",
               content: "apple or hourglass shaped, with shoulders equal to or wider than hips"
           },
           {
-              type: "ruler",
+              type: "sony",
               content: "straight up and down"
           }
       ]
@@ -37,15 +37,15 @@ var quizQuestions = [
       question: "In terms of my weight gain, I tend to:",
       answers: [
           {
-              type: "pear",
+              type: "microsoft",
               content: "gain weight easily, but find it hard to lose"
           },
           {
-              type: "apple",
+              type: "nintendo",
               content: "gain and lose weight fairly easily, but I usually stay about the same"
           },
           {
-              type: "ruler",
+              type: "sony",
               content: "have trouble gaining weight"
           }
       ]
@@ -54,15 +54,15 @@ var quizQuestions = [
       question: "When I gain weight, I tend to store it:",
       answers: [
           {
-              type: "pear",
+              type: "microsoft",
               content: "mainly on my butt, hips and thighs"
           },
           {
-              type: "apple",
+              type: "nintendo",
               content: "evenly all over, and around my midsection"
           },
           {
-              type: "ruler",
+              type: "sony",
               content: "I don’t tend to gain weight, occasionally I store fat around my midsection"
           }
       ]
@@ -71,101 +71,16 @@ var quizQuestions = [
       question: "I think my digestions is:",
       answers: [
           {
-              type: "pear",
+              type: "microsoft",
               content: "sluggish"
           },
           {
-              type: "apple",
+              type: "nintendo",
               content: "just right"
           },
           {
-              type: "ruler",
+              type: "sony",
               content: "fast"
-          }
-      ]
-  },
-  {
-      question: "My skin is:",
-      answers: [
-          {
-              type: "pear",
-              content: "oily, moist and cool"
-          },
-          {
-              type: "apple",
-              content: "soft, normal to oily"
-          },
-          {
-              type: "ruler",
-              content: "dry, rough or both"
-          }
-      ]
-  },
-  {
-      question: "I am hungry:",
-      answers: [
-          {
-              type: "pear",
-              content: "almost all the time"
-          },
-          {
-              type: "apple",
-              content: "only at meal times"
-          },
-          {
-              type: "ruler",
-              content: "rarely – but I crave sugar and caffeine often"
-          }
-      ]
-  },
-  {
-      question: "When I’m stressed, I feel:",
-      answers: [
-          {
-              type: "pear",
-              content: "upset or very tired"
-          },
-          {
-              type: "apple",
-              content: "angry and hot tempered"
-          },
-          {
-              type: "ruler",
-              content: "anxious and nervous"
-          }
-      ]
-  },
-  {
-      question: "I would describe myself as:",
-      answers: [
-          {
-              type: "pear",
-              content: "having inner confidence"
-          },
-          {
-              type: "apple",
-              content: "being more outwardly confident"
-          },
-          {
-              type: "ruler",
-              content: "actually being quite timid"
-          }
-      ]
-  },
-  {
-      question: "My friends describe me as:",
-      answers: [
-          {
-              type: "pear",
-              content: "laid back or thoughtful"
-          },
-          {
-              type: "apple",
-              content: "ambitious, competitive and passionate"
-          },
-          {
-              type: "ruler",
-              content: "hyperactive, excitable and talkative"
           }
       ]
   }

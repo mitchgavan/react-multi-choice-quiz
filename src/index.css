@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,14 +11,20 @@ body {
 
 .quiz {
   max-width: 800px;
-  margin: 2.5rem auto;
+  margin: 0 auto;
   background: #fff;
   border-radius: 3px;
 }
 
+@media (min-width: 769px) {
+  .quiz {
+    margin: 2.5rem auto;
+  }
+}
+
 .question {
   margin: 0;
-  padding: 0.5rem 1.5rem 1.5rem 2.5rem;
+  padding: 0.5rem 2.5rem 1.5rem 2.5rem;
 }
 
 .questionCount {
@@ -53,22 +63,24 @@ body {
 
 .radioCustomLabel {
     position: relative;
-    margin: 0;
-    padding: 1.5rem 2.5rem;
+    margin: 0 0 0 0;
+    padding: 1.5rem 2.5rem 1.5rem 5rem;
     width: 100%;
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .radioCustomButton ~ .radioCustomLabel:before {
+    position: absolute;
+    top: 20px;
+    left: 38px;
+    width: 20px;
+    height: 20px;
     content: '';
     background: #fff;
     display: inline-block;
     vertical-align: middle;
-    width: 20px;
-    height: 20px;
     padding: 2px 6px 6px 2px;
-    margin-right: 12px;
-    margin-top: -3px;
     text-align: center;
     border: 1px solid #bbb;
     border-radius: 50%;
@@ -77,7 +89,7 @@ body {
 .radioCustomButton:checked ~ .radioCustomLabel:before {
     content: url(./svg/icon-check.svg);
     background: #8BC53F;
-    border: 0;
+    border-color: #8BC53F;
 }
 
 .radioCustomLabel:before {
