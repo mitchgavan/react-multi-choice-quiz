@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import quizQuestions from "./api/quizQuestions";
 import Quiz from './components/Quiz';
+import logo from './svg/logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -46,13 +47,17 @@ class App extends Component {
     if (this.state.questionId < quizQuestions.length) {
         setTimeout(this.setNextQuestion, 300);
     } else {
-        // setTimeout(() => this.setResults(this.getResults()), 300);
+        setTimeout(() => this.setResults(this.getResults()), 300);
     }
 
   }
 
   setUserAnswer(answer) {
-    var updatedAnswersCount = Object.assign({}, this.state.answersCount, { [answer]: this.state.answersCount[answer] + 1 })
+    var updatedAnswersCount = Object.assign(
+      {},
+      this.state.answersCount,
+      { [answer]: this.state.answersCount[answer] + 1 }
+    );
 
     this.setState({
         answersCount: updatedAnswersCount,
@@ -73,17 +78,38 @@ class App extends Component {
     });
   }
 
+  getResults() {
+    var answersCount = this.state.answersCount;
+    var answerCountValues = Object.keys(answersCount).map((key) => answersCount[key]);
+    var maxAnswerCount = Math.max.apply(null, answerCountValues);
+
+    return Object.keys(answersCount).filter((key) => answersCount[key] === maxAnswerCount);
+  }
+
+  setResults(result) {
+    if (result.length > 1) {
+      this.setState({ result: 'Undetermined' });
+    } else {
+      this.setState({ result: result[0] });
+    }
+  }
+
   render() {
     return (
-      <Quiz
-        answer={this.state.answer}
-        answerOptions={this.state.answerOptions}
-        counter={this.state.counter}
-        questionId={this.state.questionId}
-        question={this.state.question}
-        questionTotal={quizQuestions.length}
-        onAnswerSelected={this.handleAnswerSelected}
-      />
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>React Quiz</h2>
+        </div>
+        <Quiz
+          answer={this.state.answer}
+          answerOptions={this.state.answerOptions}
+          questionId={this.state.questionId}
+          question={this.state.question}
+          questionTotal={quizQuestions.length}
+          onAnswerSelected={this.handleAnswerSelected}
+        />
+      </div>
     );
   }
 
