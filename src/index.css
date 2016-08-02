@@ -11,6 +11,7 @@ body {
 
 .quiz,
 .result {
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
   background: #fff;
@@ -100,4 +101,41 @@ body {
 
 .radioCustomLabel:before {
     font-size: 14px;
+}
+
+/* Animation */
+.fade-enter,
+.fade-leave {
+    background-color: #fff;
+}
+
+.fade-enter {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+}
+
+.fade-leave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+    opacity: 0;
+}
+
+.fade-appear {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
 }
