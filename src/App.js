@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import quizQuestions from "./api/quizQuestions";
 import Quiz from './components/Quiz';
+import Result from './components/Result';
 import logo from './svg/logo.svg';
 import './App.css';
 
@@ -16,9 +17,9 @@ class App extends Component {
       answerOptions: [],
       answer: '',
       answersCount: {
-        nintendo: 0,
-        microsoft: 0,
-        sony: 0
+        Nintendo: 0,
+        Microsoft: 0,
+        Sony: 0
       },
       result: ''
     };
@@ -27,8 +28,8 @@ class App extends Component {
     // Why? A bind call in the render path creates a brand new function on every single render #perfmatters
     this.setUserAnswer = this.setUserAnswer.bind(this);
     this.setNextQuestion = this.setNextQuestion.bind(this);
-    //this.getResults = this.getResults.bind(this);
-    //this.setResults = this.setResults.bind(this);
+    this.getResults = this.getResults.bind(this);
+    this.setResults = this.setResults.bind(this);
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
@@ -41,7 +42,6 @@ class App extends Component {
   }
 
   handleAnswerSelected(event) {
-
     this.setUserAnswer(event.currentTarget.value);
 
     if (this.state.questionId < quizQuestions.length) {
@@ -49,7 +49,6 @@ class App extends Component {
     } else {
         setTimeout(() => this.setResults(this.getResults()), 300);
     }
-
   }
 
   setUserAnswer(answer) {
@@ -79,18 +78,19 @@ class App extends Component {
   }
 
   getResults() {
-    var answersCount = this.state.answersCount;
-    var answerCountValues = Object.keys(answersCount).map((key) => answersCount[key]);
-    var maxAnswerCount = Math.max.apply(null, answerCountValues);
+    const answersCount = this.state.answersCount;
+    const answersCountKeys = Object.keys(answersCount);
+    const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
+    const maxAnswerCount = Math.max.apply(null, answersCountValues);
 
-    return Object.keys(answersCount).filter((key) => answersCount[key] === maxAnswerCount);
+    return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
   }
 
   setResults(result) {
-    if (result.length > 1) {
-      this.setState({ result: 'Undetermined' });
-    } else {
+    if (result.length === 1) {
       this.setState({ result: result[0] });
+    } else {
+      this.setState({ result: 'Undetermined' });
     }
   }
 
@@ -109,7 +109,7 @@ class App extends Component {
 
   renderResult() {
     return (
-      <div>You prefer {this.state.result}</div>
+      <Result quizResult={this.state.result} />
     );
   }
 

@@ -3,15 +3,15 @@ var quizQuestions = [
       question: "I think that my body tends to:",
       answers: [
           {
-              type: "microsoft",
+              type: "Microsoft",
               content: "carry excess weight"
           },
           {
-              type: "nintendo",
+              type: "Nintendo",
               content: "build muscle easily"
           },
           {
-              type: "sony",
+              type: "Sony",
               content: "be fairly lean"
           }
       ]
@@ -20,15 +20,15 @@ var quizQuestions = [
       question: "If I was to describe my body shape, I would say it was:",
       answers: [
           {
-              type: "microsoft",
+              type: "Microsoft",
               content: "pear shaped, with hips wider than shoulders"
           },
           {
-              type: "nintendo",
+              type: "Nintendo",
               content: "apple or hourglass shaped, with shoulders equal to or wider than hips"
           },
           {
-              type: "sony",
+              type: "Sony",
               content: "straight up and down"
           }
       ]
@@ -37,15 +37,15 @@ var quizQuestions = [
       question: "In terms of my weight gain, I tend to:",
       answers: [
           {
-              type: "microsoft",
+              type: "Microsoft",
               content: "gain weight easily, but find it hard to lose"
           },
           {
-              type: "nintendo",
+              type: "Nintendo",
               content: "gain and lose weight fairly easily, but I usually stay about the same"
           },
           {
-              type: "sony",
+              type: "Sony",
               content: "have trouble gaining weight"
           }
       ]
@@ -54,15 +54,15 @@ var quizQuestions = [
       question: "When I gain weight, I tend to store it:",
       answers: [
           {
-              type: "microsoft",
+              type: "Microsoft",
               content: "mainly on my butt, hips and thighs"
           },
           {
-              type: "nintendo",
+              type: "Nintendo",
               content: "evenly all over, and around my midsection"
           },
           {
-              type: "sony",
+              type: "Sony",
               content: "I don’t tend to gain weight, occasionally I store fat around my midsection"
           }
       ]
@@ -71,15 +71,15 @@ var quizQuestions = [
       question: "I think my digestions is:",
       answers: [
           {
-              type: "microsoft",
+              type: "Microsoft",
               content: "sluggish"
           },
           {
-              type: "nintendo",
+              type: "Nintendo",
               content: "just right"
           },
           {
-              type: "sony",
+              type: "Sony",
               content: "fast"
           }
       ]
