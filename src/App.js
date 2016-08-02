@@ -34,12 +34,31 @@ class App extends Component {
   }
 
   componentWillMount() {
-    //this.props.quizQuestions.forEach((question) => arrayHelpers.shuffleArray(question.answers));
+    const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
     this.setState({
       question: quizQuestions[0].question,
-      answerOptions: quizQuestions[0].answers
+      answerOptions: shuffledAnswerOptions[0]
     });
   }
+
+  shuffleArray(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  };
 
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);

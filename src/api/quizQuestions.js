@@ -1,86 +1,86 @@
 var quizQuestions = [
   {
-      question: "I think that my body tends to:",
+      question: "What franchise would you rather play a game from?",
       answers: [
           {
               type: "Microsoft",
-              content: "carry excess weight"
+              content: "Halo"
           },
           {
               type: "Nintendo",
-              content: "build muscle easily"
+              content: "Pokemon"
           },
           {
               type: "Sony",
-              content: "be fairly lean"
+              content: "Uncharted"
           }
       ]
   },
   {
-      question: "If I was to describe my body shape, I would say it was:",
+      question: "Which console would you prefer to play with friends?",
       answers: [
           {
               type: "Microsoft",
-              content: "pear shaped, with hips wider than shoulders"
+              content: "X-Box"
           },
           {
               type: "Nintendo",
-              content: "apple or hourglass shaped, with shoulders equal to or wider than hips"
+              content: "Nintendo 64"
           },
           {
               type: "Sony",
-              content: "straight up and down"
+              content: "Playstation 1"
           }
       ]
   },
   {
-      question: "In terms of my weight gain, I tend to:",
+      question: "Which of these racing franchises would you prefer to play a game from?",
       answers: [
           {
               type: "Microsoft",
-              content: "gain weight easily, but find it hard to lose"
+              content: "Forza"
           },
           {
               type: "Nintendo",
-              content: "gain and lose weight fairly easily, but I usually stay about the same"
+              content: "Mario Kart"
           },
           {
               type: "Sony",
-              content: "have trouble gaining weight"
+              content: "Gran Turismo"
           }
       ]
   },
   {
-      question: "When I gain weight, I tend to store it:",
+      question: "Which of these games do you think is best?",
       answers: [
           {
               type: "Microsoft",
-              content: "mainly on my butt, hips and thighs"
+              content: "BioShock"
           },
           {
               type: "Nintendo",
-              content: "evenly all over, and around my midsection"
+              content: "The Legend of Zelda: Ocarina of Time"
           },
           {
               type: "Sony",
-              content: "I don’t tend to gain weight, occasionally I store fat around my midsection"
+              content: "Final Fantasy VII"
           }
       ]
   },
   {
-      question: "I think my digestions is:",
+      question: "What console would you prefer to own?",
       answers: [
           {
               type: "Microsoft",
-              content: "sluggish"
+              content: "X-Box One"
           },
           {
               type: "Nintendo",
-              content: "just right"
+              content: "Wii U"
           },
           {
               type: "Sony",
-              content: "fast"
+              content: "Playstation 4"
           }
       ]
   }
