@@ -24,12 +24,6 @@ class App extends Component {
       result: ''
     };
 
-    // Bind event handlers for the render method in the constructor.
-    // Why? A bind call in the render path creates a brand new function on every single render #perfmatters
-    this.setUserAnswer = this.setUserAnswer.bind(this);
-    this.setNextQuestion = this.setNextQuestion.bind(this);
-    this.getResults = this.getResults.bind(this);
-    this.setResults = this.setResults.bind(this);
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
@@ -64,14 +58,14 @@ class App extends Component {
     this.setUserAnswer(event.currentTarget.value);
 
     if (this.state.questionId < quizQuestions.length) {
-        setTimeout(this.setNextQuestion, 300);
+        setTimeout(() => this.setNextQuestion(), 300);
     } else {
         setTimeout(() => this.setResults(this.getResults()), 300);
     }
   }
 
   setUserAnswer(answer) {
-    var updatedAnswersCount = Object.assign(
+    const updatedAnswersCount = Object.assign(
       {},
       this.state.answersCount,
       { [answer]: this.state.answersCount[answer] + 1 }
@@ -84,8 +78,8 @@ class App extends Component {
   }
 
   setNextQuestion() {
-    var counter = this.state.counter + 1;
-    var questionId = this.state.questionId + 1;
+    const counter = this.state.counter + 1;
+    const questionId = this.state.questionId + 1;
 
     this.setState({
         counter: counter,
