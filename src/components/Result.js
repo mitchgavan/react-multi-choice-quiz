@@ -1,11 +1,12 @@
 import React from "react";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import './Result.css';
 
 function Result(props) {
 
   return (
     <ReactCSSTransitionGroup
-      className="result"
+      className="container result"
       component="div"
       transitionName="fade"
       transitionEnterTimeout={800}

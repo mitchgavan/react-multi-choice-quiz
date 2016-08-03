@@ -3,6 +3,7 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import Question from '../components/Question';
 import QuestionCount from '../components/QuestionCount';
 import AnswerOption from '../components/AnswerOption';
+import './Quiz.css';
 
 function Quiz(props) {
 
@@ -21,7 +22,7 @@ function Quiz(props) {
 
   return (
     <ReactCSSTransitionGroup
-      className="quiz"
+      className="container"
       component="div"
       transitionName="fade"
       transitionEnterTimeout={800}
