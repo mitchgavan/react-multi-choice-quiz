@@ -84,23 +84,21 @@ body {
     width: 20px;
     height: 20px;
     content: '';
-    background: #fff;
     display: inline-block;
     vertical-align: middle;
     padding: 2px 6px 6px 2px;
     text-align: center;
+    background: #fff;
     border: 1px solid #bbb;
     border-radius: 50%;
+    transition: all 0.3s;
 }
 
 .radioCustomButton:checked ~ .radioCustomLabel:before {
-    content: url(./svg/icon-check.svg);
-    background: #8BC53F;
+    content: '';
+    background: #8BC53F url(./svg/icon-check.svg) no-repeat;
+    background-size: 26px;
     border-color: #8BC53F;
-}
-
-.radioCustomLabel:before {
-    font-size: 14px;
 }
 
 /* Animation */
@@ -111,11 +109,11 @@ body {
 
 .fade-enter {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out 0.3s;
 }
 
 .fade-enter.fade-enter-active {
     opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.3s;
 }
 
 .fade-leave {
@@ -123,19 +121,19 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    transition: opacity 0.5s ease-in-out;
     opacity: 1;
 }
 
 .fade-leave.fade-leave-active {
     opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .fade-appear {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .fade-appear.fade-appear-active {
     opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
