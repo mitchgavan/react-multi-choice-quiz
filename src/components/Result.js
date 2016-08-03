@@ -1,6 +1,5 @@
-import React from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import './Result.css';
+import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 function Result(props) {
 

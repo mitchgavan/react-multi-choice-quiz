@@ -1,5 +1,4 @@
-import React from "react";
-import './AnswerOption.css';
+import React from 'react';
 
 function AnswerOption(props) {
 

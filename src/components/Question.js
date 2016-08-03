@@ -1,5 +1,4 @@
-import React from "react";
-import './Question.css';
+import React from 'react';
 
 function Question(props) {
 

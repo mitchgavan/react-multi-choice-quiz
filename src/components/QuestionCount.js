@@ -1,5 +1,4 @@
-import React from "react";
-import './QuestionCount.css';
+import React from 'react';
 
 function QuestionCount(props) {
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import quizQuestions from "./api/quizQuestions";
+import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
 import logo from './svg/logo.svg';
