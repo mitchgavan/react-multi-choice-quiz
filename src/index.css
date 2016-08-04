@@ -103,11 +103,6 @@ body {
 }
 
 /* Animation */
-.fade-enter,
-.fade-leave {
-    background-color: #fff;
-}
-
 .fade-enter {
     opacity: 0;
 }
