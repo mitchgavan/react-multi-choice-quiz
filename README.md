@@ -2,8 +2,10 @@
 Created with [Create React App](https://github.com/facebookincubator/create-react-app)
 
 ## Get Started
+Install dependencies in your project directory with:
+### `npm install`
 
-In the project directory, you can run:
+In the project directory, you can then run:
 
 ### `npm start`
 

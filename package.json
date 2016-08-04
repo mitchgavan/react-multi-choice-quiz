@@ -2,8 +2,9 @@
   "name": "react-quiz",
   "version": "0.0.1",
   "private": true,
+  "homepage": "http://mitchgavan.com/react-multi-choice-quiz/",
   "devDependencies": {
-    "react-scripts": "0.1.0"
+    "react-scripts": "0.2.1"
   },
   "dependencies": {
     "react": "^15.3.0",
