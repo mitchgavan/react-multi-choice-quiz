@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import update from 'react-addons-update';
 import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
@@ -65,11 +66,9 @@ class App extends Component {
   }
 
   setUserAnswer(answer) {
-    const updatedAnswersCount = Object.assign(
-      {},
-      this.state.answersCount,
-      { [answer]: this.state.answersCount[answer] + 1 }
-    );
+    const updatedAnswersCount = update(this.state.answersCount, {
+      [answer]: {$apply: (currentValue) => currentValue + 1}
+    });
 
     this.setState({
         answersCount: updatedAnswersCount,
