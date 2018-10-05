@@ -1,20 +1,27 @@
 {
   "name": "react-quiz",
-  "version": "0.0.1",
-  "private": true,
-  "homepage": "http://mitchgavan.com/react-multi-choice-quiz/",
-  "devDependencies": {
-    "react-scripts": "0.2.1"
-  },
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
-    "react": "^15.3.0",
-    "react-addons-css-transition-group": "^15.3.0",
-    "react-addons-update": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.0.4",
+    "react-transition-group": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
-  }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

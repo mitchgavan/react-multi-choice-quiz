@@ -1,4 +1,17 @@
-/* Shared */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
 * {
   box-sizing: border-box;
@@ -59,77 +72,77 @@ body {
 }
 
 .radioCustomButton {
-    position: absolute;
-    width: auto;
-    opacity: 0;
+  position: absolute;
+  width: auto;
+  opacity: 0;
 }
 
 .radioCustomButton,
 .radioCustomLabel {
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .radioCustomLabel {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 1.5rem 2.5rem 1.5rem 5rem;
-    font-size: 16px;
-    line-height: 1.5;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 2.5rem 1.5rem 5rem;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .radioCustomButton ~ .radioCustomLabel:before {
-    position: absolute;
-    top: 20px;
-    left: 38px;
-    width: 28px;
-    height: 28px;
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    background: #fff;
-    border: 1px solid #bbb;
-    border-radius: 50%;
-    transition: all 0.3s;
+  position: absolute;
+  top: 20px;
+  left: 38px;
+  width: 28px;
+  height: 28px;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  transition: all 0.3s;
 }
 
 .radioCustomButton:checked ~ .radioCustomLabel:before {
-    content: '';
-    background: #8BC53F url(./svg/icon-check.svg) no-repeat;
-    background-size: 27px;
-    border-color: #8BC53F;
+  content: '';
+  background: #8bc53f url(./svg/icon-check.svg) no-repeat;
+  background-size: 27px;
+  border-color: #8bc53f;
 }
 
 /* Animation */
 .fade-enter {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out 0.3s;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
 }
 
 .fade-leave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
 }
 
 .fade-leave.fade-leave-active {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .fade-appear {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fade-appear.fade-appear-active {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
