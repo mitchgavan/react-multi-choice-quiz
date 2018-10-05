@@ -1,6 +1,6 @@
 {
   "name": "react-quiz",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": false,
   "dependencies": {
     "prop-types": "^15.6.2",
