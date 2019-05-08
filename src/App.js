@@ -15,18 +15,14 @@ class App extends Component {
       question: '',
       answerOptions: [],
       answer: '',
-      answersCount: {
-        Nintendo: 0,
-        Microsoft: 0,
-        Sony: 0
-      },
+      answersCount: {},
       result: ''
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const shuffledAnswerOptions = quizQuestions.map(question =>
       this.shuffleArray(question.answers)
     );
@@ -70,7 +66,7 @@ class App extends Component {
     this.setState((state, props) => ({
       answersCount: {
         ...state.answersCount,
-        [answer]: state.answersCount[answer] + 1
+        [answer]: (state.answersCount[answer] || 0) + 1
       },
       answer: answer
     }));
