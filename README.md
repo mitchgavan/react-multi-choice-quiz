@@ -2,7 +2,7 @@
 
 [View demo](http://mitchgavan.github.io/react-multi-choice-quiz/)
 
-I also have an accompanying blog post tutorial. Please note this still references v1 of this repo at this time.[View tutorial](https://mitchgavan.com/react-quiz/)
+There's also an accompanying [tutorial blog post](https://mitchgavan.com/react-quiz/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
